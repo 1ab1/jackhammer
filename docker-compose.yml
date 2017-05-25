@@ -6,7 +6,7 @@ volumes:
 services:
  mysqldb:
    image: mysql
-   container_name: jackhmmaer-db
+   container_name: jackhammer-db
    environment:
      MYSQL_ROOT_PASSWORD: root
      MYSQL_USER: root
@@ -15,7 +15,7 @@ services:
    ports:
      - "3306:3306"
    volumes: 
-      - mysql-data:/usr/local/bin/mysql
+      - mysql-data:/var/lib/mysql
    restart: always
    healthcheck:
      test: "nc -z localhost 3306"
